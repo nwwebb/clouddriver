@@ -24,8 +24,4 @@ class KubernetesOperationException extends RuntimeException {
   KubernetesOperationException(String operation, KubernetesClientException e) {
     super("$operation failed: ${e.status?.message ?: e.message}".toString())
   }
-
-  KubernetesOperationException(String account, String operation, KubernetesClientException e) {
-    super("$operation for account $account failed: ${e.status?.message ?: e.message}".toString())
-  }
 }
